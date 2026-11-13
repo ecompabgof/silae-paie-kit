@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "oseria-plugins",
+  "description": "Plugins Claude Code d'OSERIA pour les cabinets d'expertise comptable",
+  "owner": {
+    "name": "OSERIA",
+    "url": "https://oseria.fr"
+  },
+  "plugins": [
+    {
+      "name": "silae-paie",
+      "source": "./plugins/silae-paie",
+      "description": "Kit complet API Silae Paie : connecteur sur les 299 fonctions, skills métier, commandes et agent contrôleur de paie",
+      "category": "comptabilite",
+      "tags": ["silae", "paie", "expert-comptable"]
+    }
+  ]
+}

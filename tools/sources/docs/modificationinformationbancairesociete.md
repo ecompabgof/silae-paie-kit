@@ -1,0 +1,98 @@
+---
+title: "ModificationInformationBancaireSociete"
+slug: "modificationinformationbancairesociete"
+updated: 2023-05-19T10:56:51Z
+published: 2023-05-19T10:56:51Z
+canonical: "silae-api.document360.io/modificationinformationbancairesociete"
+---
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://silae-api.document360.io/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# ModificationInformationBancaireSociete
+
+## Fonction API
+
+```
+/v1/FicheSociete/ModificationInformationBancaireSociete
+```
+
+## Verbe HTTP
+
+Post
+
+          
+
+## Description
+
+          
+
+Permet de modifier les informations bancaires liées à un dossier
+
+## Groupe de fonctions API
+
+MODIF02
+
+## Paramètres de la requête
+
+| Paramètre | Type | Description |
+| --- | --- | --- |
+| sepaModeComptabilisation | integer(int32) | Indique le mode de comptabilisation des opérations à configurer dans le dossier : \| Mode de comptabilisation des opérations \| Valeur correspondante \| \| --- \| --- \| \| Par défaut \| 0 \| \| Comptabilisation par lot \| 1 \| \| Comptabilisation unitaire \| 2 \| |
+| Mode de comptabilisation des opérations | Valeur correspondante |
+| Par défaut | 0 |
+| Comptabilisation par lot | 1 |
+| Comptabilisation unitaire | 2 |
+| informationBancaireSociete | InformationBancaireSociete[] | Liste d'éléments structurés contenant les informations bancaires de la société (cf. détail ci-dessous) |
+| numeroDossier | string | Numéro du dossier concerné par la requête |
+
+### InformationBancaireSociete
+
+| Paramètre | Type | Description |
+| --- | --- | --- |
+| nomInterneEtablissement | string | Nom interne de l'établissement auquel rattacher les informations bancaires |
+| rib | string | RIB du compte |
+| formatFichiers | integer(int32) | Format du fichier bancaire: \| Format du fichier bancaire \| Valeur correspondante \| \| --- \| --- \| \| Sepa \| 0 \| \| Sepa 03 \| 3 \| \| Sepa 03 2.1 \| 4 \| \| Paymen \| 5 \| \| Etebac \| 2 \| \| CFonb 160c \| 6 \| \| International \| 7 \| |
+| Format du fichier bancaire | Valeur correspondante |
+| Sepa | 0 |
+| Sepa 03 | 3 |
+| Sepa 03 2.1 | 4 |
+| Paymen | 5 |
+| Etebac | 2 |
+| CFonb 160c | 6 |
+| International | 7 |
+| iban | string | IBAN du compte |
+| bic | string | BIC du compte |
+| numeroEmetteur | string | Numéro émetteur du compte |
+
+## Requête
+
+```
+{
+  "sepaModeComptabilisation": 0,
+  "informationBancaireSociete": [
+    {
+      "nomInterneEtablissement": "string",
+      "rib": "string",
+      "formatFichiers": 0,
+      "iban": "string",
+      "bic": "string",
+      "numeroEmetteur": "string"
+    },
+    {
+      "nomInterneEtablissement": "string",
+      "rib": "string",
+      "formatFichiers": 0,
+      "iban": "string",
+      "bic": "string",
+      "numeroEmetteur": "string"
+    }
+  ],
+  "numeroDossier": "string"
+}
+```
+
+## Messages d'erreur
+
+| Erreur | Message | Description |
+| --- | --- | --- |

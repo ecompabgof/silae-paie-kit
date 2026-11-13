@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "silae": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/server.mjs"],
+      "env": {
+        "SILAE_CLIENT_ID": "${user_config.client_id}",
+        "SILAE_CLIENT_SECRET": "${user_config.client_secret}",
+        "SILAE_SUBSCRIPTION_KEY": "${user_config.subscription_key}",
+        "SILAE_DOSSIER_DEFAUT": "${user_config.dossier_defaut}",
+        "SILAE_MODE": "${user_config.mode_acces}",
+        "SILAE_MODELE": "${user_config.modele_api}",
+        "SILAE_ENVIRONNEMENT": "${user_config.environnement}",
+        "SILAE_DOSSIER_SORTIE": "${user_config.dossier_sortie}"
+      }
+    }
+  }
+}

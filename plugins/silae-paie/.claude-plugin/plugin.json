@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "silae-paie",
+  "displayName": "Silae Paie",
+  "version": "1.0.0",
+  "description": "Kit complet pour piloter l'API REST Silae Paie depuis Claude Code : connecteur MCP sur les 299 fonctions, skills métier (saisie des variables, contrôle de paie, entrées de salariés, éditions, pilotage du cabinet), commandes et agent contrôleur de paie. Lecture seule par défaut.",
+  "author": {
+    "name": "OSERIA",
+    "url": "https://oseria.fr"
+  },
+  "homepage": "https://oseria.fr",
+  "repository": "https://github.com/ecompabgof/silae-paie-kit",
+  "license": "MIT",
+  "keywords": ["silae", "paie", "payroll", "expert-comptable", "cabinet", "api", "mcp"],
+  "userConfig": {
+    "client_id": {
+      "type": "string",
+      "title": "Client ID Silae",
+      "description": "Client ID du compte API, visible dans les informations générales du Portail API Silae (api-portal.silae.fr)"
+    },
+    "client_secret": {
+      "type": "string",
+      "title": "Client Secret Silae",
+      "description": "Client Secret du compte API, généré dans le Portail API (valable un an)",
+      "sensitive": true
+    },
+    "subscription_key": {
+      "type": "string",
+      "title": "Clé de configuration d'accès API",
+      "description": "Clé principale ou secondaire de la configuration d'accès API (Ocp-Apim-Subscription-Key), générée dans le Portail API",
+      "sensitive": true
+    },
+    "dossier_defaut": {
+      "type": "string",
+      "title": "Dossier de paie par défaut",
+      "description": "Numéro de dossier utilisé quand aucun n'est précisé (facultatif)",
+      "default": ""
+    },
+    "mode_acces": {
+      "type": "string",
+      "title": "Mode d'accès",
+      "description": "lecture : aucune modification possible. ecriture : saisies (variables, absences, salariés) après confirmation. complet : ajoute les opérations critiques (DPAE, DSN, paramétrage, droits, banque)",
+      "options": ["lecture", "ecriture", "complet"],
+      "default": "lecture"
+    },
+    "modele_api": {
+      "type": "string",
+      "title": "Modèle de contrat API",
+      "description": "1A usage interne paie (lecture), 1B usage interne RH (lecture et écriture), 2 mise à disposition client",
+      "options": ["1A", "1B", "2", "inconnu"],
+      "default": "inconnu"
+    },
+    "environnement": {
+      "type": "string",
+      "title": "Environnement",
+      "description": "Environnement Silae visé par ces identifiants (information affichée pour éviter les confusions)",
+      "options": ["test", "production"],
+      "default": "test"
+    },
+    "dossier_sortie": {
+      "type": "string",
+      "title": "Dossier de sortie des fichiers",
+      "description": "Où enregistrer les PDF, Excel et réponses volumineuses (par défaut ~/Documents/Silae)",
+      "default": ""
+    }
+  }
+}
