@@ -46,7 +46,7 @@
     "modele_api": {
       "type": "string",
       "title": "Modèle de contrat API",
-      "description": "1A usage interne paie (lecture), 1B usage interne RH (lecture et écriture), 2 mise à disposition client",
+      "description": "1A usage interne paie (inclus dans Silae Paie), 1B usage interne RH (1A plus saisies, facturé par dossier), 2 mise à disposition client",
       "options": ["1A", "1B", "2", "inconnu"],
       "default": "inconnu"
     },

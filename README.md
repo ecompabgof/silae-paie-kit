@@ -18,9 +18,9 @@ Aucune dépendance à installer : Node.js 18 ou plus suffit (déjà présent ave
 
 ## Ce que l'API Silae permet, et ce qu'elle ne permet pas
 
-Avec le modèle 1A (lecture) : lire dossiers, salariés, bulletins, cumuls, absences, DSN. Sortir journal, récap, coûts salariaux, charges, bulletins PDF en PDF ou Excel. Récupérer les écritures comptables et les fichiers de virement. Suivre la production du cabinet.
+Avec le modèle 1A (usage interne Paie), inclus dans l'offre Silae Paie sans facturation : lire dossiers, salariés, bulletins, cumuls, absences, DSN. Sortir journal, récap, coûts salariaux, charges, bulletins PDF en PDF ou Excel. Récupérer les écritures comptables et les fichiers de virement. Suivre la production du cabinet.
 
-Avec le modèle 1B (lecture et écriture), en plus : saisir heures, primes, éléments variables, acomptes et absences, créer un salarié, faire la DPAE, modifier les fiches salarié et société.
+Avec le modèle 1B (usage interne RH), tout le 1A, plus : saisir heures, primes, éléments variables, acomptes et absences, créer un salarié, faire la DPAE, modifier les fiches salarié et société. Le 1B est facturé selon les dossiers ouverts à l'API.
 
 L'API ne calcule pas les bulletins de la paie classique, n'envoie pas la DSN mensuelle et ne supprime pas de bulletin. Le calcul et la validation restent dans Silae.
 
